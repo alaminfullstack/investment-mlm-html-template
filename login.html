@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="target-densitydpi=device-dpi, initial-scale=1.0, user-scalable=no"
+    />
+    <title>Login</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
+      integrity="sha512-vebUliqxrVkBy3gucMhClmyQP9On/HAWQdKDXRaAlb/FKuTbxkjPKUyqVOxAcGwFDka79eTF+YXwfke1h3/wfg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://db.onlinewebfonts.com/c/05e476e067ffef74ca5686f229c40a63?family=PingFang+SC+Regular"
+      rel="stylesheet"
+    />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "PingFang SC Regular";
+      }
+
+      html,
+      body {
+        font-family: "PingFang SC Regular";
+      }
+
+      .btn-orange {
+        background: linear-gradient(
+          260deg,
+          rgb(253, 167, 88) 0%,
+          rgb(253, 167, 88) 100%
+        );
+        margin-bottom: 48px;
+      }
+
+      .login-title {
+        position: absolute;
+        left: 41px;
+        top: 83px;
+        opacity: 1;
+        font-family: PingFang SC;
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 19px;
+        letter-spacing: 0;
+        color: #fff;
+      }
+
+      .login-img-group {
+        padding: 8.133vw 0;
+        z-index: 10;
+      }
+
+      .login-img {
+        position: absolute;
+        left: 132px;
+        top: 52px;
+        width: 96px;
+        height: 96px;
+        opacity: 1;
+      }
+
+      .box {
+        padding: 6.9vw;
+        border-radius: 12px;
+        margin-top: 210px;
+        opacity: 1;
+        background: #fff;
+        box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.08);
+      }
+
+      .register-link {
+        opacity: 1;
+        text-align: right;
+        font-size: 14px;
+        color: #262626;
+        text-decoration: none;
+      }
+
+      .form-control {
+        background: #f5f5f5;
+        color: #4d4d4d;
+        padding: 2.667vw 4.267vw;
+        border: none;
+      }
+
+      .input-group-text {
+        border: none;
+      }
+
+      i {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body
+    style="
+      background-image: url('image/background.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      height: 100vh;
+      overflow-x: hidden;
+    "
+  >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-12">
+          <div class="kefu">
+            <div class="login-bg">
+              <div class="login-title">Login</div>
+              <div class="login-img-group">
+                <img src="image/logo.png" class="login-img" />
+              </div>
+
+              <div class="box">
+                <form action="login" id="submiterForm" method="POST">
+                  <input
+                    type="hidden"
+                    name="_token"
+                    value="yrUxLSC3jebr22adaazWh4ZQUQtBSLk7XMvuR9sR"
+                  />
+                  <div class="mb-3">
+                    <label class="form-label">Account</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      name="phone"
+                      placeholder="Telephone Number"
+                      id="account"
+                      autocomplete="false"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Password</label>
+                    <div class="input-group">
+                      <input
+                        type="password"
+                        class="form-control"
+                        name="password"
+                        placeholder="password"
+                        id="password"
+                        autocomplete="false"
+                      />
+                      <span class="input-group-text" id="eye"
+                        ><i class="las la-eye"></i
+                      ></span>
+                    </div>
+                  </div>
+
+                  <button
+                    type="submit"
+                    id="submit"
+                    disabled="disabled"
+                    class="btn btn-lg w-100 btn-orange"
+                  >
+                    Login
+                  </button>
+                </form>
+
+                <div class="text-end">
+                  <a href="register" class="register-link"
+                    >Don't have an account? Sign up</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+      $("#eye").on("click", function () {
+        var passwordField = $("#password");
+        var eyeIcon = $(this).find("i");
+
+        if (passwordField.attr("type") === "password") {
+          passwordField.attr("type", "text");
+          eyeIcon.removeClass("las la-eye").addClass("las la-eye-slash");
+        } else {
+          passwordField.attr("type", "password");
+          eyeIcon.removeClass("las la-eye-slash").addClass("las la-eye");
+        }
+      });
+
+      $("#account, #password").on("input", function () {
+        var accountValue = $("#account").val();
+        var passwordValue = $("#password").val();
+        var submitButton = $("#submit");
+
+        if (accountValue && passwordValue) {
+          submitButton.prop("disabled", false);
+          // submitButton.removeClass("btn-default");
+          // submitButton.addClass("btn-orange");
+        } else {
+          submitButton.prop("disabled", true);
+          // submitButton.removeClass("btn-orange");
+          // submitButton.addClass("btn-default");
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="target-densitydpi=device-dpi, initial-scale=1.0, user-scalable=no"
+    />
+    <title>Recharge Record</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
+      integrity="sha512-vebUliqxrVkBy3gucMhClmyQP9On/HAWQdKDXRaAlb/FKuTbxkjPKUyqVOxAcGwFDka79eTF+YXwfke1h3/wfg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://db.onlinewebfonts.com/c/05e476e067ffef74ca5686f229c40a63?family=PingFang+SC+Regular"
+      rel="stylesheet"
+    />
+    <link href="assets/css/slick.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/jquery.toast.css" rel="stylesheet" />
+
+    <style>
+      .btn {
+        box-shadow: none;
+      }
+      .card {
+        background-color: #1b1b29;
+      }
+
+      .btn-white {
+        background-color: white;
+        color: #009f8a;
+      }
+
+      .btn-custom {
+        background-color: #009f8a;
+        color: white;
+      }
+
+      .nav-pills .nav-link.active,
+      .nav-pills .show > .nav-link {
+        background-color: #009f8a;
+      }
+
+      .custom-file-input {
+        opacity: 0;
+        position: absolute;
+        z-index: -1;
+      }
+
+      .custom-file-label {
+        cursor: pointer;
+      }
+
+      .custom-file-label::after {
+        content: "Choose File";
+      }
+
+      .custom-file-input:focus + .custom-file-label,
+      .custom-file-input.has-focus + .custom-file-label {
+        border-color: #007bff;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+      }
+
+      .custom-file-input:lang(en) ~ .custom-file-label::after {
+        content: "";
+      }
+
+      .custom-file-label {
+        border: 5px dashed #ccc;
+        border-radius: 5px;
+        padding: 15px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body style="background-color: #131321; overflow-x: hidden">
+    <script src="public/assets/toast.js"></script>
+
+    <div class="recharge-page">
+      <h2 class="text-white px-2 my-3">Deposit</h2>
+
+      <div class="container">
+        <div class="card mb-3">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+              <h5 class="text-white" style="font-size: 18px">Currency</h5>
+              <div>
+                <span style="color: #009f8a">USDT</span>
+                <span
+                  class="text-white"
+                  style="font-size: 12px; margin-left: 5px"
+                  >USDT</span
+                >
+                <img
+                  src="public/footbal/assets/image/icon/back.png"
+                  style="width: 15px; height: 15px"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="text-white mb-3" style="font-size: 18px">Network</h5>
+
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+              <li class="nav-item me-2" role="presentation">
+                <button
+                  class="nav-link btn btn-white active"
+                  id="pills-home-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-home"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-home"
+                  aria-selected="true"
+                >
+                  TRC20
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link btn btn-white"
+                  id="pills-profile-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-profile"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-profile"
+                  aria-selected="false"
+                >
+                  ERC20
+                </button>
+              </li>
+            </ul>
+
+            <h5
+              class="text-white p3-2 py-3"
+              style="font-size: 16px; border-top: 1px solid white"
+            >
+              Charging Address
+            </h5>
+
+            <div class="tab-content" id="pills-tabContent">
+              <div
+                class="tab-pane fade show active"
+                id="pills-home"
+                role="tabpanel"
+                aria-labelledby="pills-home-tab"
+              >
+                <div class="bg-white bg-white mx-auto p-3 w-50">
+                  <div>
+                    <img
+                      src="public/footbal/assets/image/qr.svg"
+                      class="card-img"
+                      style="height: 110px"
+                    />
+                  </div>
+                </div>
+
+                <div class="my-3">
+                  <h3 style="font-size: 15px; color: white">
+                    TAstsBygzfeUAa4nkBamLe6sQgKCy6HDXs
+                  </h3>
+
+                  <div class="mt-3 mx-auto text-center">
+                    <button
+                      type="button"
+                      class="btn btn-custom"
+                      onclick="clipBoard('TAstsBygzfeUAa4nkBamLe6sQgKCy6HDXs')"
+                    >
+                      Copy
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="tab-pane fade"
+                id="pills-profile"
+                role="tabpanel"
+                aria-labelledby="pills-profile-tab"
+              >
+                <div class="bg-white bg-white mx-auto p-3 w-50">
+                  <div>
+                    <img
+                      src="public/footbal/assets/image/qr.svg"
+                      class="card-img"
+                      style="height: 110px"
+                    />
+                  </div>
+                </div>
+
+                <div class="my-3">
+                  <h3 style="font-size: 15px; color: white">
+                    TBstsBygzfeUAa4nkBamLe6sQgKCy6HDXs
+                  </h3>
+
+                  <div class="mt-3 mx-auto text-center">
+                    <button
+                      type="button"
+                      class="btn btn-custom"
+                      onclick="clipBoard('TBstsBygzfeUAa4nkBamLe6sQgKCy6HDXs')"
+                    >
+                      Copy
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mb-3">
+          <div class="card-body">
+            <p class="text-danger">
+              The calf press machine causes you to push your knees against pads
+              and raise your toes so your calves are activated. It helps isolate
+              and develop the calf muscle and also strengthens the joint around
+              your ankle
+            </p>
+
+            <p class="text-white">
+              Commercial gym – this is a very expensive machine to own and has
+              no purpose or need in a home gym. The muscles it uses can be
+              easily targeted using compound exercises such as deadlifts,
+              lunges, and squats. You can even use gym equipment like barbells,
+              exercise bands, and different types of weight to achieve the same
+              results.
+            </p>
+            <p class="text-white">
+              This machine is slightly similar to the sitting calf machine,
+              except the major difference is, you’re in a standing position.
+              Similarly, it allows you to work your calves at a different angle
+              to isolate and lengthen them.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <form
+              action="usdt-recharge"
+              method="post"
+              enctype="multipart/form-data"
+            >
+              <input
+                type="hidden"
+                name="_token"
+                value="uXtdmOvzLMaXE5OUw93lzYOCUkqL5aPyZDb5EmVw"
+              />
+              <input
+                type="hidden"
+                name="usdt_name"
+                value="TRC20"
+                id="usdt_name"
+              />
+              <input
+                type="hidden"
+                name="usdt_address"
+                value="TAstsBygzfeUAa4nkBamLe6sQgKCy6HDXs"
+                id="usdt_address"
+              />
+
+              <div class="recharge-input-area">
+                <div class="mb-3">
+                  <label class="form-label text-white">Transfer Amount</label>
+                  <input
+                    type="number"
+                    id="getAmount"
+                    placeholder="Please enter usdt amount"
+                    class="form-control"
+                    oninput="bdt_convert(this)"
+                    required
+                    name="usdt"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label text-white"
+                    >Uplaod Transfer Voucher</label
+                  >
+                  <div class="custom-file text-center">
+                    <input
+                      type="file"
+                      class="custom-file-input"
+                      required
+                      name="photo"
+                      id="customFile"
+                    />
+                    <label class="custom-file-label" for="customFile"
+                      ><i class="fa fa-plus" style="font-size: 60px"></i
+                    ></label>
+                  </div>
+                </div>
+
+                <button class="rn-btn btn btn-primary w-100">Submit</button>
+
+                <p
+                  style="
+                    margin: 0;
+                    margin-top: 8px;
+                    text-align: right;
+                    margin-right: 8px;
+                    font-size: 15px;
+                  "
+                >
+                  BDT=<span class="bdt_amount">0.00</span>
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+
+    <script src="assets/js/jquery.toast.js"></script>
+    <script>
+      var rate = "1.00";
+      function bdt_convert(_this) {
+        document.querySelector(".bdt_amount").innerHTML = _this.value * rate;
+      }
+      function clipBoard(text) {
+        const body = document.body;
+        const input = document.createElement("input");
+        body.append(input);
+        input.style.opacity = 0;
+        input.value = text.replaceAll(" ", "");
+        input.select();
+        input.setSelectionRange(0, input.value.length);
+        document.execCommand("Copy");
+        input.blur();
+        input.remove();
+        message("Address copied");
+      }
+
+      $(document).on("click", "#pills-home-tab", function () {
+        $("#usdt_name").val("TRC20");
+        $("#usdt_address").val("TAstsBygzfeUAa4nkBamLe6sQgKCy6HDXs");
+      });
+
+      $(document).on("click", "#pills-profile-tab", function () {
+        $("#usdt_name").val("ERC20");
+        $("#usdt_address").val("TBstsBygzfeUAa4nkBamLe6sQgKCy6HDXs");
+      });
+    </script>
+  </body>
+</html>

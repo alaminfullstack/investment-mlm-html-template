@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="target-densitydpi=device-dpi, initial-scale=1.0, user-scalable=no"
+    />
+    <title>Home</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
+      integrity="sha512-vebUliqxrVkBy3gucMhClmyQP9On/HAWQdKDXRaAlb/FKuTbxkjPKUyqVOxAcGwFDka79eTF+YXwfke1h3/wfg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://db.onlinewebfonts.com/c/05e476e067ffef74ca5686f229c40a63?family=PingFang+SC+Regular"
+      rel="stylesheet"
+    />
+    <link href="assets/css/slick.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/jquery.toast.css" rel="stylesheet" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "PingFang SC Regular";
+      }
+
+      html,
+      body {
+        font-family: "PingFang SC Regular";
+      }
+
+      .slider-img {
+        height: 240px;
+      }
+
+      .sm-icon {
+        height: 40px;
+        width: 40px;
+        display: block;
+      }
+
+      .md-icon {
+        height: 90px;
+        width: 90px;
+        display: block;
+      }
+
+      .link {
+        text-decoration: none;
+        text-align: center;
+        display: block;
+      }
+
+      .link-title {
+        color: black;
+        font-size: 12px;
+        padding: 5px 0px;
+      }
+
+      .fs-7 {
+        font-size: 14px;
+      }
+
+      .fs-8 {
+        font-size: 12px;
+      }
+
+      .support {
+        position: fixed;
+        top: 50%;
+        right: 1%;
+      }
+
+      .download {
+        position: fixed;
+        top: 10%;
+        right: 5%;
+        z-index: 9;
+      }
+
+      .footer-icon {
+        height: 30px;
+        width: 30px;
+        display: block;
+      }
+
+      .link-footer-title {
+        color: black;
+        font-size: 10px;
+        padding-top: 5px;
+        padding-bottom: 0px;
+        margin-bottom: 2px;
+      }
+
+      .header-bg {
+        background-color: rgb(248, 248, 248);
+        color: rgb(0, 0, 0);
+        padding: 7px 3px;
+      }
+
+      .back-icon {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+      }
+
+      .nav-pills .nav-link.active,
+      .nav-pills .show > .nav-link {
+        background: linear-gradient(
+          260deg,
+          rgb(253, 167, 88) 0%,
+          rgb(253, 167, 88) 100%
+        );
+      }
+
+      .btn-orange {
+        background: linear-gradient(
+          260deg,
+          rgb(253, 167, 88) 0%,
+          rgb(253, 167, 88) 100%
+        );
+
+        border-radius: 30px;
+        color: white;
+        padding: 2px 15px;
+      }
+
+      .plan-title {
+        color: #6d8078;
+        margin-bottom: 7px;
+      }
+
+      .plan-img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 5px;
+        margin-top: 0px;
+      }
+
+      .plan-icon {
+        background: linear-gradient(
+          260deg,
+          rgb(253, 167, 88) 0%,
+          rgb(253, 167, 88) 100%
+        );
+
+        border-radius: 50%;
+        padding: 3px;
+      }
+
+      .plan-icon i {
+        font-size: 12px;
+      }
+
+      .table-sm > :not(caption) > * > * {
+        padding: 1px 5px;
+        color: #6d8078;
+      }
+    </style>
+  </head>
+  <body style="overflow-x: hidden">
+    <div class="">
+      <div class="">
+        <div class="d-flex align-items-center header-bg">
+          <a href="" class="back-icon">
+            <i class="las la-angle-left"></i>
+          </a>
+          <div class="ms-3 w-100">
+            <div class="login-title text-center">Rent</div>
+          </div>
+        </div>
+
+        <div class="px-3 mt-3">
+          <ul class="nav nav-pills nav-fill mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="pills-home-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-home"
+                type="button"
+                role="tab"
+                aria-controls="pills-home"
+                aria-selected="true"
+              >
+                Standart EQ
+              </button>
+            </li>
+            <!--<li class="nav-item" role="presentation">-->
+            <!--    <button-->
+            <!--        class="nav-link"-->
+            <!--        id="pills-profile-tab"-->
+            <!--        data-bs-toggle="pill"-->
+            <!--        data-bs-target="#pills-profile"-->
+            <!--        type="button"-->
+            <!--        role="tab"-->
+            <!--        aria-controls="pills-profile"-->
+            <!--        aria-selected="false"-->
+            <!--    >-->
+            <!--        Walfare EQ-->
+            <!--    </button>-->
+            <!--</li>-->
+          </ul>
+          <div class="tab-content" id="pills-tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="pills-home"
+              role="tabpanel"
+              aria-labelledby="pills-home-tab"
+              tabindex="0"
+            >
+              <div class="box mb-5">
+                <div class="plan-title">Project,,,Y</div>
+
+                <div class="d-flex align-items-center">
+                  <div>
+                    <img
+                      src="public/upload/package/1704526927LOf.png"
+                      class="plan-img"
+                    />
+
+                    <a href="fund_-details/1" class="btn btn-sm btn-orange mt-1"
+                      >Rent</a
+                    >
+                  </div>
+                  <div class="w-100">
+                    <table class="table table-sm table-borderless">
+                      <tr>
+                        <td class="text-start" style="width: 10%">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7" style="width: 50%">
+                          Total Price
+                        </td>
+                        <td class="text-end fs-7" style="width: 40%">300.00</td>
+                      </tr>
+                      <tr>
+                        <td class="text-start">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7">Circulations</td>
+                        <td class="text-end fs-7">3 day</td>
+                      </tr>
+                      <tr>
+                        <td class="text-start">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7">Daily Income</td>
+                        <td class="text-end fs-7">150.00</td>
+                      </tr>
+                      <tr>
+                        <td class="text-start">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7">Total Inome</td>
+                        <td class="text-end fs-7">150.00</td>
+                      </tr>
+
+                      <tr>
+                        <td colspan="3">
+                          <span class="fs-7"> Lorem ipsum dolor si... </span>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="bg-body-secondary p-4 pop_purchase position-fixed rounded-3 top-50 w-75 shadow mx-4"
+                id="package1"
+                style="display: none"
+              >
+                <div class="pop_container_purchase">
+                  <h3>Purchase Confirmation</h3>
+                  <p>Are you sure you want to buy this Project,,,Y?</p>
+
+                  <div class="purchase_btns">
+                    <button
+                      class="btn btn-sm btn-danger"
+                      onclick="closePopPurchase('package1')"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      class="btn btn-sm btn-success"
+                      onclick="window.location.href='purchase/confirmation/1'"
+                    >
+                      OK
+                    </button>
+                    <div class="h_border"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="box mb-5">
+                <div class="plan-title">Project..1</div>
+
+                <div class="d-flex align-items-center">
+                  <div>
+                    <img
+                      src="public/upload/package/1703002751N6o.jpg"
+                      class="plan-img"
+                    />
+
+                    <a
+                      href="fund_-details/13"
+                      class="btn btn-sm btn-orange mt-1"
+                      >Rent</a
+                    >
+                  </div>
+                  <div class="w-100">
+                    <table class="table table-sm table-borderless">
+                      <tr>
+                        <td class="text-start" style="width: 10%">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7" style="width: 50%">
+                          Total Price
+                        </td>
+                        <td class="text-end fs-7" style="width: 40%">750.00</td>
+                      </tr>
+                      <tr>
+                        <td class="text-start">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7">Circulations</td>
+                        <td class="text-end fs-7">30 day</td>
+                      </tr>
+                      <tr>
+                        <td class="text-start">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7">Daily Income</td>
+                        <td class="text-end fs-7">45.00</td>
+                      </tr>
+                      <tr>
+                        <td class="text-start">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7">Total Inome</td>
+                        <td class="text-end fs-7">45.00</td>
+                      </tr>
+
+                      <tr>
+                        <td colspan="3">
+                          <span class="fs-7"> Lorem ipsum dolor si... </span>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="bg-body-secondary p-4 pop_purchase position-fixed rounded-3 top-50 w-75 shadow mx-4"
+                id="package13"
+                style="display: none"
+              >
+                <div class="pop_container_purchase">
+                  <h3>Purchase Confirmation</h3>
+                  <p>Are you sure you want to buy this Project..1?</p>
+
+                  <div class="purchase_btns">
+                    <button
+                      class="btn btn-sm btn-danger"
+                      onclick="closePopPurchase('package13')"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      class="btn btn-sm btn-success"
+                      onclick="window.location.href='purchase/confirmation/13'"
+                    >
+                      OK
+                    </button>
+                    <div class="h_border"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="box mb-5">
+                <div class="plan-title">Project..2</div>
+
+                <div class="d-flex align-items-center">
+                  <div>
+                    <img
+                      src="public/upload/package/1703002785a6S.jpg"
+                      class="plan-img"
+                    />
+
+                    <a
+                      href="fund_-details/14"
+                      class="btn btn-sm btn-orange mt-1"
+                      >Rent</a
+                    >
+                  </div>
+                  <div class="w-100">
+                    <table class="table table-sm table-borderless">
+                      <tr>
+                        <td class="text-start" style="width: 10%">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7" style="width: 50%">
+                          Total Price
+                        </td>
+                        <td class="text-end fs-7" style="width: 40%">
+                          1,600.00
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-start">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7">Circulations</td>
+                        <td class="text-end fs-7">30 day</td>
+                      </tr>
+                      <tr>
+                        <td class="text-start">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7">Daily Income</td>
+                        <td class="text-end fs-7">90.00</td>
+                      </tr>
+                      <tr>
+                        <td class="text-start">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7">Total Inome</td>
+                        <td class="text-end fs-7">90.00</td>
+                      </tr>
+
+                      <tr>
+                        <td colspan="3">
+                          <span class="fs-7"> Lorem ipsum dolor si... </span>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="bg-body-secondary p-4 pop_purchase position-fixed rounded-3 top-50 w-75 shadow mx-4"
+                id="package14"
+                style="display: none"
+              >
+                <div class="pop_container_purchase">
+                  <h3>Purchase Confirmation</h3>
+                  <p>Are you sure you want to buy this Project..2?</p>
+
+                  <div class="purchase_btns">
+                    <button
+                      class="btn btn-sm btn-danger"
+                      onclick="closePopPurchase('package14')"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      class="btn btn-sm btn-success"
+                      onclick="window.location.href='purchase/confirmation/14'"
+                    >
+                      OK
+                    </button>
+                    <div class="h_border"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="box mb-5">
+                <div class="plan-title">Project..3</div>
+
+                <div class="d-flex align-items-center">
+                  <div>
+                    <img
+                      src="public/upload/package/1703002813OTi.jpg"
+                      class="plan-img"
+                    />
+
+                    <a
+                      href="fund_-details/15"
+                      class="btn btn-sm btn-orange mt-1"
+                      >Rent</a
+                    >
+                  </div>
+                  <div class="w-100">
+                    <table class="table table-sm table-borderless">
+                      <tr>
+                        <td class="text-start" style="width: 10%">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7" style="width: 50%">
+                          Total Price
+                        </td>
+                        <td class="text-end fs-7" style="width: 40%">
+                          2,800.00
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-start">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7">Circulations</td>
+                        <td class="text-end fs-7">30 day</td>
+                      </tr>
+                      <tr>
+                        <td class="text-start">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7">Daily Income</td>
+                        <td class="text-end fs-7">140.00</td>
+                      </tr>
+                      <tr>
+                        <td class="text-start">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7">Total Inome</td>
+                        <td class="text-end fs-7">140.00</td>
+                      </tr>
+
+                      <tr>
+                        <td colspan="3">
+                          <span class="fs-7"> Lorem ipsum dolor si... </span>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="bg-body-secondary p-4 pop_purchase position-fixed rounded-3 top-50 w-75 shadow mx-4"
+                id="package15"
+                style="display: none"
+              >
+                <div class="pop_container_purchase">
+                  <h3>Purchase Confirmation</h3>
+                  <p>Are you sure you want to buy this Project..3?</p>
+
+                  <div class="purchase_btns">
+                    <button
+                      class="btn btn-sm btn-danger"
+                      onclick="closePopPurchase('package15')"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      class="btn btn-sm btn-success"
+                      onclick="window.location.href='purchase/confirmation/15'"
+                    >
+                      OK
+                    </button>
+                    <div class="h_border"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="box mb-5">
+                <div class="plan-title">Project..4</div>
+
+                <div class="d-flex align-items-center">
+                  <div>
+                    <img
+                      src="public/upload/package/1703002849TYW.jpg"
+                      class="plan-img"
+                    />
+
+                    <a
+                      href="fund_-details/16"
+                      class="btn btn-sm btn-orange mt-1"
+                      >Rent</a
+                    >
+                  </div>
+                  <div class="w-100">
+                    <table class="table table-sm table-borderless">
+                      <tr>
+                        <td class="text-start" style="width: 10%">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7" style="width: 50%">
+                          Total Price
+                        </td>
+                        <td class="text-end fs-7" style="width: 40%">
+                          4,000.00
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-start">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7">Circulations</td>
+                        <td class="text-end fs-7">32 day</td>
+                      </tr>
+                      <tr>
+                        <td class="text-start">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7">Daily Income</td>
+                        <td class="text-end fs-7">250.00</td>
+                      </tr>
+                      <tr>
+                        <td class="text-start">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7">Total Inome</td>
+                        <td class="text-end fs-7">250.00</td>
+                      </tr>
+
+                      <tr>
+                        <td colspan="3">
+                          <span class="fs-7"> Lorem ipsum dolor si... </span>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="bg-body-secondary p-4 pop_purchase position-fixed rounded-3 top-50 w-75 shadow mx-4"
+                id="package16"
+                style="display: none"
+              >
+                <div class="pop_container_purchase">
+                  <h3>Purchase Confirmation</h3>
+                  <p>Are you sure you want to buy this Project..4?</p>
+
+                  <div class="purchase_btns">
+                    <button
+                      class="btn btn-sm btn-danger"
+                      onclick="closePopPurchase('package16')"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      class="btn btn-sm btn-success"
+                      onclick="window.location.href='purchase/confirmation/16'"
+                    >
+                      OK
+                    </button>
+                    <div class="h_border"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="box mb-5">
+                <div class="plan-title">Project...5</div>
+
+                <div class="d-flex align-items-center">
+                  <div>
+                    <img
+                      src="public/upload/package/17030028762kA.jpg"
+                      class="plan-img"
+                    />
+
+                    <a
+                      href="fund_-details/17"
+                      class="btn btn-sm btn-orange mt-1"
+                      >Rent</a
+                    >
+                  </div>
+                  <div class="w-100">
+                    <table class="table table-sm table-borderless">
+                      <tr>
+                        <td class="text-start" style="width: 10%">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7" style="width: 50%">
+                          Total Price
+                        </td>
+                        <td class="text-end fs-7" style="width: 40%">
+                          6,000.00
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-start">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7">Circulations</td>
+                        <td class="text-end fs-7">32 day</td>
+                      </tr>
+                      <tr>
+                        <td class="text-start">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7">Daily Income</td>
+                        <td class="text-end fs-7">356.25</td>
+                      </tr>
+                      <tr>
+                        <td class="text-start">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7">Total Inome</td>
+                        <td class="text-end fs-7">356.25</td>
+                      </tr>
+
+                      <tr>
+                        <td colspan="3">
+                          <span class="fs-7"> Lorem ipsum dolor si... </span>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="bg-body-secondary p-4 pop_purchase position-fixed rounded-3 top-50 w-75 shadow mx-4"
+                id="package17"
+                style="display: none"
+              >
+                <div class="pop_container_purchase">
+                  <h3>Purchase Confirmation</h3>
+                  <p>Are you sure you want to buy this Project...5?</p>
+
+                  <div class="purchase_btns">
+                    <button
+                      class="btn btn-sm btn-danger"
+                      onclick="closePopPurchase('package17')"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      class="btn btn-sm btn-success"
+                      onclick="window.location.href='purchase/confirmation/17'"
+                    >
+                      OK
+                    </button>
+                    <div class="h_border"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="box mb-5">
+                <div class="plan-title">Project..6</div>
+
+                <div class="d-flex align-items-center">
+                  <div>
+                    <img
+                      src="public/upload/package/17030029132Ur.jpg"
+                      class="plan-img"
+                    />
+
+                    <a
+                      href="fund_-details/18"
+                      class="btn btn-sm btn-orange mt-1"
+                      >Rent</a
+                    >
+                  </div>
+                  <div class="w-100">
+                    <table class="table table-sm table-borderless">
+                      <tr>
+                        <td class="text-start" style="width: 10%">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7" style="width: 50%">
+                          Total Price
+                        </td>
+                        <td class="text-end fs-7" style="width: 40%">
+                          13,000.00
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-start">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7">Circulations</td>
+                        <td class="text-end fs-7">30 day</td>
+                      </tr>
+                      <tr>
+                        <td class="text-start">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7">Daily Income</td>
+                        <td class="text-end fs-7">650.00</td>
+                      </tr>
+                      <tr>
+                        <td class="text-start">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7">Total Inome</td>
+                        <td class="text-end fs-7">650.00</td>
+                      </tr>
+
+                      <tr>
+                        <td colspan="3">
+                          <span class="fs-7"> Lorem ipsum dolor si... </span>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="bg-body-secondary p-4 pop_purchase position-fixed rounded-3 top-50 w-75 shadow mx-4"
+                id="package18"
+                style="display: none"
+              >
+                <div class="pop_container_purchase">
+                  <h3>Purchase Confirmation</h3>
+                  <p>Are you sure you want to buy this Project..6?</p>
+
+                  <div class="purchase_btns">
+                    <button
+                      class="btn btn-sm btn-danger"
+                      onclick="closePopPurchase('package18')"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      class="btn btn-sm btn-success"
+                      onclick="window.location.href='purchase/confirmation/18'"
+                    >
+                      OK
+                    </button>
+                    <div class="h_border"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="box mb-5">
+                <div class="plan-title">Project,,7</div>
+
+                <div class="d-flex align-items-center">
+                  <div>
+                    <img
+                      src="public/upload/package/1703002943XaQ.jpg"
+                      class="plan-img"
+                    />
+
+                    <a
+                      href="fund_-details/19"
+                      class="btn btn-sm btn-orange mt-1"
+                      >Rent</a
+                    >
+                  </div>
+                  <div class="w-100">
+                    <table class="table table-sm table-borderless">
+                      <tr>
+                        <td class="text-start" style="width: 10%">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7" style="width: 50%">
+                          Total Price
+                        </td>
+                        <td class="text-end fs-7" style="width: 40%">
+                          15,000.00
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-start">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7">Circulations</td>
+                        <td class="text-end fs-7">30 day</td>
+                      </tr>
+                      <tr>
+                        <td class="text-start">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7">Daily Income</td>
+                        <td class="text-end fs-7">850.00</td>
+                      </tr>
+                      <tr>
+                        <td class="text-start">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7">Total Inome</td>
+                        <td class="text-end fs-7">850.00</td>
+                      </tr>
+
+                      <tr>
+                        <td colspan="3">
+                          <span class="fs-7"> Lorem ipsum dolor si... </span>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="bg-body-secondary p-4 pop_purchase position-fixed rounded-3 top-50 w-75 shadow mx-4"
+                id="package19"
+                style="display: none"
+              >
+                <div class="pop_container_purchase">
+                  <h3>Purchase Confirmation</h3>
+                  <p>Are you sure you want to buy this Project,,7?</p>
+
+                  <div class="purchase_btns">
+                    <button
+                      class="btn btn-sm btn-danger"
+                      onclick="closePopPurchase('package19')"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      class="btn btn-sm btn-success"
+                      onclick="window.location.href='purchase/confirmation/19'"
+                    >
+                      OK
+                    </button>
+                    <div class="h_border"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="box mb-5">
+                <div class="plan-title">Project..8</div>
+
+                <div class="d-flex align-items-center">
+                  <div>
+                    <img
+                      src="public/upload/package/17030030062tu.jpg"
+                      class="plan-img"
+                    />
+
+                    <a
+                      href="fund_-details/20"
+                      class="btn btn-sm btn-orange mt-1"
+                      >Rent</a
+                    >
+                  </div>
+                  <div class="w-100">
+                    <table class="table table-sm table-borderless">
+                      <tr>
+                        <td class="text-start" style="width: 10%">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7" style="width: 50%">
+                          Total Price
+                        </td>
+                        <td class="text-end fs-7" style="width: 40%">
+                          20,000.00
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-start">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7">Circulations</td>
+                        <td class="text-end fs-7">30 day</td>
+                      </tr>
+                      <tr>
+                        <td class="text-start">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7">Daily Income</td>
+                        <td class="text-end fs-7">1,250.00</td>
+                      </tr>
+                      <tr>
+                        <td class="text-start">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7">Total Inome</td>
+                        <td class="text-end fs-7">1,250.00</td>
+                      </tr>
+
+                      <tr>
+                        <td colspan="3">
+                          <span class="fs-7"> Lorem ipsum dolor si... </span>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="bg-body-secondary p-4 pop_purchase position-fixed rounded-3 top-50 w-75 shadow mx-4"
+                id="package20"
+                style="display: none"
+              >
+                <div class="pop_container_purchase">
+                  <h3>Purchase Confirmation</h3>
+                  <p>Are you sure you want to buy this Project..8?</p>
+
+                  <div class="purchase_btns">
+                    <button
+                      class="btn btn-sm btn-danger"
+                      onclick="closePopPurchase('package20')"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      class="btn btn-sm btn-success"
+                      onclick="window.location.href='purchase/confirmation/20'"
+                    >
+                      OK
+                    </button>
+                    <div class="h_border"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="box mb-5">
+                <div class="plan-title">Project..9</div>
+
+                <div class="d-flex align-items-center">
+                  <div>
+                    <img
+                      src="public/upload/package/1703079602I6S.jpg"
+                      class="plan-img"
+                    />
+
+                    <a
+                      href="fund_-details/31"
+                      class="btn btn-sm btn-orange mt-1"
+                      >Rent</a
+                    >
+                  </div>
+                  <div class="w-100">
+                    <table class="table table-sm table-borderless">
+                      <tr>
+                        <td class="text-start" style="width: 10%">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7" style="width: 50%">
+                          Total Price
+                        </td>
+                        <td class="text-end fs-7" style="width: 40%">
+                          40,000.00
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-start">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7">Circulations</td>
+                        <td class="text-end fs-7">30 day</td>
+                      </tr>
+                      <tr>
+                        <td class="text-start">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7">Daily Income</td>
+                        <td class="text-end fs-7">3,000.00</td>
+                      </tr>
+                      <tr>
+                        <td class="text-start">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7">Total Inome</td>
+                        <td class="text-end fs-7">3,000.00</td>
+                      </tr>
+
+                      <tr>
+                        <td colspan="3">
+                          <span class="fs-7"> Lorem ipsum dolor si... </span>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="bg-body-secondary p-4 pop_purchase position-fixed rounded-3 top-50 w-75 shadow mx-4"
+                id="package31"
+                style="display: none"
+              >
+                <div class="pop_container_purchase">
+                  <h3>Purchase Confirmation</h3>
+                  <p>Are you sure you want to buy this Project..9?</p>
+
+                  <div class="purchase_btns">
+                    <button
+                      class="btn btn-sm btn-danger"
+                      onclick="closePopPurchase('package31')"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      class="btn btn-sm btn-success"
+                      onclick="window.location.href='purchase/confirmation/31'"
+                    >
+                      OK
+                    </button>
+                    <div class="h_border"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="box mb-5">
+                <div class="plan-title">Project..10</div>
+
+                <div class="d-flex align-items-center">
+                  <div>
+                    <img
+                      src="public/upload/package/1703079757jpZ.jpg"
+                      class="plan-img"
+                    />
+
+                    <a
+                      href="fund_-details/32"
+                      class="btn btn-sm btn-orange mt-1"
+                      >Rent</a
+                    >
+                  </div>
+                  <div class="w-100">
+                    <table class="table table-sm table-borderless">
+                      <tr>
+                        <td class="text-start" style="width: 10%">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7" style="width: 50%">
+                          Total Price
+                        </td>
+                        <td class="text-end fs-7" style="width: 40%">
+                          50,000.00
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-start">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7">Circulations</td>
+                        <td class="text-end fs-7">30 day</td>
+                      </tr>
+                      <tr>
+                        <td class="text-start">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7">Daily Income</td>
+                        <td class="text-end fs-7">5,000.00</td>
+                      </tr>
+                      <tr>
+                        <td class="text-start">
+                          <span class="plan-icon">
+                            <i class="las la-check"></i>
+                          </span>
+                        </td>
+                        <td class="text-start fs-7">Total Inome</td>
+                        <td class="text-end fs-7">5,000.00</td>
+                      </tr>
+
+                      <tr>
+                        <td colspan="3">
+                          <span class="fs-7"> Lorem ipsum dolor si... </span>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="bg-body-secondary p-4 pop_purchase position-fixed rounded-3 top-50 w-75 shadow mx-4"
+                id="package32"
+                style="display: none"
+              >
+                <div class="pop_container_purchase">
+                  <h3>Purchase Confirmation</h3>
+                  <p>Are you sure you want to buy this Project..10?</p>
+
+                  <div class="purchase_btns">
+                    <button
+                      class="btn btn-sm btn-danger"
+                      onclick="closePopPurchase('package32')"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      class="btn btn-sm btn-success"
+                      onclick="window.location.href='purchase/confirmation/32'"
+                    >
+                      OK
+                    </button>
+                    <div class="h_border"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-profile"
+              role="tabpanel"
+              aria-labelledby="pills-profile-tab"
+              tabindex="0"
+            >
+              ...
+            </div>
+          </div>
+        </div>
+        <div style="height: 80px"></div>
+
+        <div
+          class="bg-white pt-2"
+          style="
+            position: fixed;
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
+            border-top: 1px solid rgb(0 0 0 / 33%);
+          "
+        >
+          <div class="row row-cols-5">
+            <div class="col">
+              <a href="/" class="align-items-center d-flex flex-column link">
+                <img src="image/home.png" class="footer-icon" />
+                <p class="link-footer-title">Home</p>
+              </a>
+            </div>
+            <div class="col">
+              <a href="fund" class="align-items-center d-flex flex-column link">
+                <img src="image/rent.png" class="footer-icon" />
+                <p class="link-footer-title">Rent</p>
+              </a>
+            </div>
+            <div class="col">
+              <a
+                href="order"
+                class="align-items-center d-flex flex-column link"
+              >
+                <img src="image/income.png" class="footer-icon" />
+                <p class="link-footer-title">Income</p>
+              </a>
+            </div>
+            <div class="col">
+              <a
+                href="invite"
+                class="align-items-center d-flex flex-column link"
+              >
+                <img src="image/share.png" class="footer-icon" />
+                <p class="link-footer-title">Share</p>
+              </a>
+            </div>
+            <div class="col">
+              <a href="mine" class="align-items-center d-flex flex-column link">
+                <img src="image/user.png" class="footer-icon" />
+                <p class="link-footer-title">User</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/jquery.toast.js"></script>
+  </body>
+  <script>
+    function closePopPurchase(id) {
+      document.getElementById(id).style.display = "none";
+    }
+    function openPopPurchase(id) {
+      document.getElementById(id).style.display = "block";
+    }
+  </script>
+</html>
