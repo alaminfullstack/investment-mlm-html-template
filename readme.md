@@ -8,18 +8,18 @@ graph TD;
     Login-->Home;
     Home-->My;
     Home-->Recharge;
-    Recharge-->Recharge History;
+    Recharge-->Recharge_History;
     Home-->Withdraw;
-    Withdraw-->Withdraw History;
+    Withdraw-->Withdraw_History;
     Home-->Team;
-    Team-->Team Detail;
+    Team-->Team_Detail;
     Home-->VIP;
     VIP-->VIP Detail;
     My-->History;
-    My-->Recharge History;
-    My-->Withdraw History;
-    My-->Bank Setting;
-    My-->Password Change;
+    My-->Recharge_History;
+    My-->Withdraw_History;
+    My-->Bank_Setting;
+    My-->Password_Change;
     My-->Logout;
 ```
 
