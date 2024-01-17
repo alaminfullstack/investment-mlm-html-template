@@ -3,11 +3,24 @@
 Here is a complate flow chart:
 
 ```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
+graph TB;
+    Register-->Login;
+    Login-->Home;
+    Home-->My;
+    Home-->Recharge;
+    Recharge-->Recharge_History;
+    Home-->Withdraw;
+    Withdraw-->Withdraw_History;
+    Home-->Team;
+    Team-->Team_Detail;
+    Home-->VIP;
+    VIP-->VIP_Detail;
+    My-->History;
+    My-->Recharge_History;
+    My-->Withdraw_History;
+    My-->Bank_Setting;
+    My-->Password_Change;
+    My-->Logout;
 ```
 
 ### Login
